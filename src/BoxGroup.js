@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import App from './App';
+import Box from './Box';
 
 class AppGroup extends Component {
 
@@ -8,7 +8,7 @@ class AppGroup extends Component {
      //note using 10 is bad form and too static, but only way without changing array in App
      //to be a JSON file both Components can access, etc
     for(let i = 0; i < 10; i++){
-      images[i] = <App index={i}/>
+      images[i] = <Box index={i}/>
     }
     return images;
   }
