@@ -22,6 +22,4 @@ class AppGroup extends Component {
   }
 }
 
-
-
 export default AppGroup;

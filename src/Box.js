@@ -23,10 +23,7 @@ class App extends Component {
 
   //incriments this.CurrentIndex by +1 until going to breach array range, then resets to 0
   nextImage(){
-    if(this.state.currentIndex >= this.state.urlList.length-1)
-      this.setState({currentIndex: 0});
-    else
-      this.setState({currentIndex: this.state.currentIndex+1});
+    this.state.currentIndex >= this.state.urlList.length-1 ? (this.setState({currentIndex: 0})) : this.setState({currentIndex: this.state.currentIndex+1});
   }
 
   //updates image every second
@@ -34,27 +31,14 @@ class App extends Component {
         setInterval(()=> this.nextImage(), 3000);
   }
 
-  //create image and set default photo to play
-  getImage(index){
-      let pic = <img src={this.state.urlList[this.state.currentIndex]} alt="wojack" style={{width:"100%", height: "100%", margin: "30px"}}></img>;
-
-      //different image sizes for larger and smaller viewports
-      if(document.documentElement.clientWidth > 900){
-        pic.props.style.width="20vw";
-        pic.props.style.height="20vw";
-      }
-      else{
-        pic.props.style.width="90vw";
-        pic.props.style.height="90vw";
-      }
-
-      return pic;
-  }
-
+  //returns image with different size based on viewport size
   render() {
-    return this.getImage();
+    return document.documentElement.clientWidth > 900 ? (
+        <img src={this.state.urlList[this.state.currentIndex]} alt="wojack" style={{margin: "30px", width:"20vw", height: "20vw"}}></img>
+        ) : (
+        <img src={this.state.urlList[this.state.currentIndex]} alt="wojack" style={{margin: "30px", width:"90vw", height: "90vw"}}></img>
+        );
   }
 }
-
 
 export default App;
