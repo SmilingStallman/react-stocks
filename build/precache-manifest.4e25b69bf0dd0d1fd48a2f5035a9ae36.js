@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "388467c3a3fd9b62bc6646aee8c51f5e",
+    "revision": "6a3adb5657765d95f86c4c61a7d4fbe8",
     "url": "/react-stocks/index.html"
   },
   {
-    "revision": "39dac6741a21902ee2d8",
+    "revision": "101fa96aef6fcae08508",
     "url": "/react-stocks/static/css/main.9900add9.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-stocks/static/js/2.36714e1a.chunk.js"
   },
   {
-    "revision": "39dac6741a21902ee2d8",
-    "url": "/react-stocks/static/js/main.8cc9097b.chunk.js"
+    "revision": "101fa96aef6fcae08508",
+    "url": "/react-stocks/static/js/main.30c90542.chunk.js"
   },
   {
     "revision": "d7dd8ad0839d7dad26f2",
